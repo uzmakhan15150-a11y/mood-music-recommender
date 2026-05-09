@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: Arial;
+  background: url('https://cdn.pixabay.com/photo/2017/10/11/23/35/musical-background-2842924_1280.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-card {
+  width: 380px;
+  padding: 20px;
+  border-radius: 20px;
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+.buttons button {
+  margin: 5px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons button.active,
+.buttons button:hover {
+  background: red;
+  color: white;
+}
+
+#search {
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  margin-top: 10px;
+  border: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+ul li {
+  background: white;
+  color: black;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+ul li.activeSong {
+  background: red;
+  color: white;
+}
+
+.player {
+  margin-top: 15px;
+}
+
+audio {
+  width: 100%;
+}
+
+.download {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 20px;
+}
+
+.controls button {
+  margin: 5px;
+  padding: 8px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.equalizer {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin: 10px 0;
+}
+
+.equalizer span {
+  width: 5px;
+  height: 10px;
+  background: red;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  50% { height: 25px; }
+}
+
+@media (max-width: 480px) {
+  .glass-card {
+    width: 90%;
+  }
+}

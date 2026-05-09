@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mood-Based Music Recommender</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="mainApp">
+  <div class="glass-card">
+
+    <h1>Mood-Based Music Recommender</h1>
+
+    <!-- Mood -->
+    <div class="buttons">
+      <button onclick="selectMood('happy')">😊 Happy</button>
+      <button onclick="selectMood('sad')">🥺 Sad</button>
+      <button onclick="selectMood('calm')">😌 Calm</button>
+    </div>
+
+    <!-- Language -->
+    <h3>Select Language</h3>
+    <div class="buttons">
+      <button onclick="selectLang('hindi')">Hindi</button>
+      <button onclick="selectLang('english')">English</button>
+      <button onclick="selectLang('marathi')">Marathi</button>
+    </div>
+
+    <!-- Search -->
+    <input type="text" id="search" placeholder="Search song...">
+
+    <!-- Songs -->
+    <h3>Recommended Songs</h3>
+    <ul id="songList"></ul>
+
+    <!-- Player -->
+    <div class="player">
+      <p id="songName">No song selected</p>
+
+      <div class="equalizer">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <audio id="player" controls></audio>
+
+      <!-- Controls -->
+      <div class="controls">
+        <button onclick="prevSong()">⏮</button>
+        <button onclick="nextSong()">⏭</button>
+      </div>
+
+      <button class="download" onclick="downloadSong()">⬇ Download Song</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
